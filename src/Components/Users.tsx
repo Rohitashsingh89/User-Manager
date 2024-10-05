@@ -2,6 +2,7 @@ import React, { useState, useEffect, ChangeEvent } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+// Define a type for the user Information
 interface User {
   id: number;
   name: string;
@@ -24,6 +25,7 @@ function Users() {
   const [editUser, setEditUser] = useState<User | null>(null);
   const [formError, setFormError] = useState<string>("");
 
+  // Get All Users
   useEffect(() => {
     const fetchUsers = async () => {
       try {
@@ -44,6 +46,7 @@ function Users() {
     setUserToDelete(user);
   };
 
+  // Delete the user
   const deleteUser = async (id: number) => {
     try {
       await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
