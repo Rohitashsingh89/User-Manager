@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
 import UserDetail from "./Components/UserDetail";
 import Users from "./Components/Users";
+import "./App.css";
 
 function App() {
   return (
